@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Glow Salon - Design</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <a href="home.html">Home</a> |
+    <a href="analysis.html">Analysis</a> |
+    <a href="features.html">Features</a> |
+    <a href="design.html">Design</a> |
+    <a href="tech.html">Tech & Budget</a>
+  </nav>
+
+  <h1>Design & User Experience</h1>
+  <p><strong>Color Scheme:</strong> Soft pink and white.</p>
+  <p><strong>Typography:</strong> Poppins for headings, Open Sans for body.</p>
+  <p><strong>Layout:</strong> Minimalist, image-driven, clear call-to-action buttons.</p>
+  <p><strong>UX:</strong> Simple, consistent navigation menu on every page.</p>
+  <div class="design-controls">
+
+    <button onclick="changeTheme()">
+        Change Page Theme
+    </button>
+
+    <p id="themeMessage">
+        Click the button to change the page appearance.
+    </p>
+
+</div>
+
+<script>
+    function changeTheme() {
+
+        document.body.classList.toggle("alternate-theme");
+
+        if (document.body.classList.contains("alternate-theme")) {
+
+            document.getElementById("themeMessage").innerHTML =
+                "You are now using the alternative theme!";
+
+        } else {
+
+            document.getElementById("themeMessage").innerHTML =
+                "You are now using the original pink theme!";
+
+        }
+    }
+</script>
+
+<div class="font-controls">
+    <h3>Adjust Text Size</h3>
+    <p>Choose a comfortable text size for reading.</p>
+
+    <button onclick="changeFontSize(1)">A+</button>
+    <button onclick="changeFontSize(-1)">A-</button>
+    <button onclick="resetFontSize()">Reset</button>
+
+    <p id="fontMessage">Current text size: Normal</p>
+</div>
+
+<script>
+    let currentFontSize = 16;
+
+    function changeFontSize(amount) {
+        currentFontSize += amount;
+
+        if (currentFontSize > 24) {
+            currentFontSize = 24;
+        }
+
+        if (currentFontSize < 12) {
+            currentFontSize = 12;
+        }
+
+        document.body.style.fontSize = currentFontSize + "px";
+
+        document.getElementById("fontMessage").textContent =
+            "Current text size: " + currentFontSize + "px";
+    }
+
+    function resetFontSize() {
+        currentFontSize = 16;
+        document.body.style.fontSize = "16px";
+
+        document.getElementById("fontMessage").textContent =
+            "Current text size: Normal";
+    }
+</script>
+
+<div class="font-preview">
+    <h3>Font Style Preview</h3>
+    <p>Choose a font to preview our salon design.</p>
+
+    <select id="fontSelector" onchange="previewFont()">
+        <option value="Arial">Arial</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Courier New">Courier New</option>
+    </select>
+
+    <div id="fontSample">
+        <h2>Luxury Glow Hair and Beauty Salon</h2>
+        <p>Beauty begins with confidence. Experience our hair, nail and lash services.</p>
+    </div>
+</div>
+<script>
+    function previewFont() {
+        const selectedFont =
+            document.getElementById("fontSelector").value;
+
+        document.getElementById("fontSample").style.fontFamily =
+            selectedFont;
+    }
+</script>
+<script src="script.js"></script>
+</body>
+</html>

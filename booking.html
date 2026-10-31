@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Book an Appointment</h1>
+
+    <form id="bookingForm">
+        <label for="service">Choose a Service:</label>
+
+        <select id="service" required>
+            <option value="">Select Service</option>
+            <option value="Hair">Hair</option>
+            <option value="Nails">Nails</option>
+            <option value="Lashes">Lashes</option>
+        </select>
+
+        <label for="date">Choose a Date:</label>
+        <input type="date" id="date" required>
+
+        <label for="time">Choose a Time:</label>
+        <input type="time" id="time" required>
+
+        <button type="submit">Book Appointment</button>
+    </form>
+
+    <script>
+        // The main JavaScript is in script.js
+    </script>
+
+</body>
+</html>

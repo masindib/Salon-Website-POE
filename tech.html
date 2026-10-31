@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Glow Salon - Tech & Budget</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <a href="home.html">Home</a> |
+    <a href="analysis.html">Analysis</a> |
+    <a href="features.html">Features</a> |
+    <a href="design.html">Design</a> |
+    <a href="tech.html">Tech & Budget</a>
+  </nav>
+
+  <h1>Technical Requirements</h1>
+  <p>Hosted on secure shared hosting with SSL. Domain: luxuryglow.co.za. Built with HTML, CSS, JavaScript, WordPress CMS.</p>
+
+  <h2>Timeline</h2>
+  <div class="timeline-container">
+    <div class="timeline-moving">
+
+        <span>Week 1: Planning, content creation, wireframes</span>
+
+        <span>Week 2–3: Development and booking system integration</span>
+
+        <span>Week 4: Testing, feedback, launch</span>
+
+    </div>
+</div>
+
+  <h2>Budget</h2>
+  <table border="1">
+    <tr><th>Item</th><th>Cost</th></tr>
+    <tr><td>Development</td><td>R15,000</td></tr>
+    <tr><td>Hosting & Domain</td><td>R2,000/year</td></tr>
+    <tr><td>Maintenance</td><td>R6,000/year</td></tr>
+  </table>
+
+  <button onclick="calculateMyBudget()">
+    Calculate Total Budget
+</button>
+
+<p id="budgetResult"></p>
+
+<script>
+    function calculateMyBudget() {
+        let development = 15000;
+        let hosting = 2000;
+        let maintenance = 6000;
+
+        let total = development + hosting + maintenance;
+
+        document.getElementById("budgetResult").innerHTML =
+            "Your estimated first-year budget is R" +
+            total.toLocaleString("en-ZA");
+    }
+</script>
+
+  <section class="references-section">
+
+    <h2>Our References</h2>
+
+    <p class="reference-intro">
+        Explore the sources used in developing
+        the Luxury Glow Hair and Beauty Salon website.
+    </p>
+
+    <button onclick="toggleReferences()">
+        Show / Hide References
+    </button>
+
+    <div id="referenceList">
+
+        <div class="reference-card">
+            <h3>HubSpot (n.d.)</h3>
+            <p>How I set up a website for my small business.</p>
+            <a href="https://blog.hubspot.com/website/how-to-set-up-a-website"
+               target="_blank" rel="noopener noreferrer">
+                Visit HubSpot
+            </a>
+        </div>
+
+        <div class="reference-card">
+            <h3>U.S. Small Business Administration (n.d.)</h3>
+            <p>Manage your business.</p>
+            <a href="https://www.sba.gov/counseling/manage-your-business/"
+               target="_blank" rel="noopener noreferrer">
+                Visit SBA
+            </a>
+        </div>
+
+        <div class="reference-card">
+            <h3>Statista (n.d.)</h3>
+            <p>Beauty and personal care in South Africa.</p>
+            <a href="https://www.statista.com/outlook/cmo/beauty-personal-care/south-africa/"
+               target="_blank" rel="noopener noreferrer">
+                Visit Statista
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+function toggleReferences() {
+    const references =
+        document.getElementById("referenceList");
+
+    if (references.style.display === "none") {
+        references.style.display = "block";
+    } else {
+        references.style.display = "none";
+    }
+}
+
+</script>
+  <script src="script.js"></script>
+</body>
+</html>
